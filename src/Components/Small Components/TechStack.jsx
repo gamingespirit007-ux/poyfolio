@@ -17,20 +17,20 @@ function TechStack({ obj }) {
     ]
     
     return (
-        <div className="overflow-hidden">
+        <div className="overflow-visible py-8">
             <div className="flex items-center justify-center">
                 {techLogos.map((tech, index) => (
                     <motion.div
                         key={index}
-                        className="mx-8 md:mx-12 flex flex-col items-center group cursor-pointer"
+                        className="mx-6 md:mx-10 flex flex-col items-center group cursor-pointer relative"
                         whileHover={{ 
-                            scale: 1.2,
-                            y: -10,
+                            scale: 1.15,
+                            y: -8,
                         }}
                         transition={{ 
                             type: "spring", 
-                            stiffness: 400, 
-                            damping: 10 
+                            stiffness: 300, 
+                            damping: 15 
                         }}
                     >
                         <motion.div
@@ -42,7 +42,7 @@ function TechStack({ obj }) {
                         >
                             {/* Glow effect background */}
                             <motion.div
-                                className="absolute inset-0 rounded-full blur-xl opacity-0 group-hover:opacity-30"
+                                className="absolute inset-0 rounded-full blur-lg opacity-0 group-hover:opacity-25"
                                 style={{ backgroundColor: tech.color }}
                                 whileHover={{ scale: 1.5 }}
                                 transition={{ duration: 0.3 }}
@@ -50,7 +50,7 @@ function TechStack({ obj }) {
                             
                             {/* Icon container */}
                             <motion.div
-                                className="relative z-10 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center text-4xl md:text-5xl transition-all duration-300 group-hover:shadow-2xl"
+                                className="relative z-10 w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-3xl md:text-4xl transition-all duration-300 group-hover:shadow-2xl"
                                 style={{ 
                                     color: tech.color,
                                     backgroundColor: 'rgba(255, 255, 255, 0.1)',
@@ -68,7 +68,7 @@ function TechStack({ obj }) {
                         
                         {/* Tech name tooltip */}
                         <motion.div
-                            className="absolute top-full mt-2 px-3 py-1 bg-gray-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap z-20"
+                            className="absolute top-full mt-4 px-3 py-1 bg-gray-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap z-30"
                             style={{ backgroundColor: tech.color }}
                             initial={{ opacity: 0, y: 10 }}
                             whileHover={{ opacity: 1, y: 0 }}
