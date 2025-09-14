@@ -312,76 +312,12 @@ function Homepage() {
         </div>
       </motion.section>
 
-      <motion.section 
-        className="max-w-6xl mx-auto px-12 py-16"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        <div className="text-center mb-12">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-3 mb-4"
-          >
-            <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
-              <span className="text-2xl">📸</span>
-            </div>
-            <h2 className={`text-3xl md:text-4xl font-bold ${
-              mode 
-                ? 'bg-gradient-to-r from-white via-gray-200 to-gray-400 text-transparent bg-clip-text'
-                : 'bg-gradient-to-r from-gray-900 via-gray-700 to-gray-500 text-transparent bg-clip-text'
-            }`}>
-              Visual Storyteller
-            </h2>
-          </motion.div>
-          
-          <motion.p 
-            className={`text-lg md:text-xl max-w-2xl mx-auto ${
-              mode ? 'text-gray-300' : 'text-gray-600'
-            }`}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            Beyond code, I capture moments through my lens. Photography teaches me to see details, 
-            composition, and beauty - skills that enhance my approach to design and development.
-          </motion.p>
-          
-          <motion.div
-            className="flex flex-wrap justify-center gap-4 mt-6"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            viewport={{ once: true }}
-          >
-            {['Nature', 'Architecture', 'Street', 'Portrait'].map((genre, index) => (
-              <span
-                key={genre}
-                className={`px-4 py-2 rounded-full text-sm font-medium border transition-all duration-300 hover:scale-105 ${
-                  mode 
-                    ? 'bg-gray-800/50 border-gray-600 text-gray-300 hover:bg-gray-700/50 hover:border-gray-500'
-                    : 'bg-gray-100 border-gray-300 text-gray-700 hover:bg-gray-200 hover:border-gray-400'
-                }`}
-              >
-                {genre}
-              </span>
-            ))}
-          </motion.div>
-        </div>
+      <section className="max-w-6xl mx-auto px-12">
+        <p className="sm:text-2xl text-xl font-bold">
+          An Enthusiast Photographer Also 📸
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
-          <PhotoGalleryComponent />
-        </motion.div>
+        <PhotoGalleryComponent />
       </section>
       {/* ABOUT PAGE */}
 
