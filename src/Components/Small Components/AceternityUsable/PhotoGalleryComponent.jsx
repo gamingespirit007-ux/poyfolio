@@ -3,7 +3,7 @@ import { LayoutGrid } from "../../ui/photo-gallery";
 
 export function PhotoGalleryComponent() {
   return (
-    <div className="h-screen mt-2 mb-8 w-full">
+    <div className="min-h-[600px] w-full">
       <LayoutGrid cards={cards} />
     </div>
   );
@@ -11,14 +11,14 @@ export function PhotoGalleryComponent() {
 
 const SkeletonOne = () => {
   return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        House in the woods
+    <div className="p-4">
+      <p className="font-bold text-2xl md:text-3xl text-white mb-2">
+        Serene Wilderness
       </p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A serene and tranquil retreat, this house in the woods offers a peaceful
-        escape from the hustle and bustle of city life.
+      <p className="text-sm text-gray-300 mb-3">Nature Photography</p>
+      <p className="font-normal text-sm leading-relaxed max-w-lg text-neutral-200">
+        Capturing the untouched beauty of nature, where silence speaks louder than words 
+        and every frame tells a story of tranquility.
       </p>
     </div>
   );
@@ -26,43 +26,44 @@ const SkeletonOne = () => {
 
 const SkeletonTwo = () => {
   return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        House above the clouds
+    <div className="p-4">
+      <p className="font-bold text-2xl md:text-3xl text-white mb-2">
+        Above the Clouds
       </p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        Perched high above the world, this house offers breathtaking views and a
-        unique living experience. It&apos;s a place where the sky meets home,
-        and tranquility is a way of life.
+      <p className="text-sm text-gray-300 mb-3">Landscape Photography</p>
+      <p className="font-normal text-sm leading-relaxed max-w-lg text-neutral-200">
+        Elevated perspectives that showcase the world from a different angle, 
+        where earth meets sky in perfect harmony.
       </p>
     </div>
   );
 };
+
 const SkeletonThree = () => {
   return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        Greens all over
+    <div className="p-4">
+      <p className="font-bold text-2xl md:text-3xl text-white mb-2">
+        Emerald Dreams
       </p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A house surrounded by greenery and nature&apos;s beauty. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
+      <p className="text-sm text-gray-300 mb-3">Nature Photography</p>
+      <p className="font-normal text-sm leading-relaxed max-w-lg text-neutral-200">
+        Immersed in nature's vibrant palette, where every shade of green 
+        tells a story of life, growth, and renewal.
       </p>
     </div>
   );
 };
+
 const SkeletonFour = () => {
   return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        Rivers are serene
+    <div className="p-4">
+      <p className="font-bold text-2xl md:text-3xl text-white mb-2">
+        Flowing Serenity
       </p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A house by the river is a place of peace and tranquility. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
+      <p className="text-sm text-gray-300 mb-3">Water Photography</p>
+      <p className="font-normal text-sm leading-relaxed max-w-lg text-neutral-200">
+        The gentle flow of water creates a symphony of peace, 
+        reflecting the sky and surrounding beauty in perfect stillness.
       </p>
     </div>
   );
